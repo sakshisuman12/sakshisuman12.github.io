@@ -18,7 +18,7 @@ const classes = {
 };
 
 const Header = ({ metadata = {}, noBlog = false }) => {
-  const twitter = get(metadata, 'author', false);
+  const twitter = false; // get(metadata, 'author', false);
   const github = get(metadata, 'github', false);
   const linkedin = get(metadata, 'linkedin', false);
 
@@ -62,6 +62,16 @@ const Header = ({ metadata = {}, noBlog = false }) => {
                 href={`https://twitter.com/${twitter}`}
               >
                 Twitter
+              </a>
+            </li>
+          )}
+          {(
+            <li className={classes.item}>
+              <a
+                className={classes.link}
+                href="./coverletter.pdf"
+              >
+                Cover Letter
               </a>
             </li>
           )}
